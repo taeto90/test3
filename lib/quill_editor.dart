@@ -14,19 +14,27 @@ class _EditorState extends State<Editor> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          QuillToolbar.basic(controller: _controller_quill),
-          Expanded(
-            child: Container(
-              child: QuillEditor.basic(
-                controller: _controller_quill,
-                readOnly: false, // true for view only mode
-              ),
+      body:  Container(
+        color: Colors.red,
+        child: Container(
+          color: Colors.white,
+            margin: EdgeInsets.all(50),
+            child: Column(
+              children: [
+                QuillToolbar.basic(controller: _controller_quill),
+                Expanded(
+                  child: Container(
+                    child: QuillEditor.basic(
+                      controller: _controller_quill,
+                      readOnly: false, // true for view only mode
+                    ),
+                  ),
+                )
+              ],
             ),
-          )
-        ],
+          ),
       ),
+      
     );
   }
 }
